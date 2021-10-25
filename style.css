@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* font-family: 'Kumbh Sans', sans-serif; */
+
+:root {
+   --dark-cyan: hsl(185, 75%, 39%);
+   --v-dark-blue: hsl(229, 23%, 23%);
+   --dark-gray: hsl(0, 0%, 59%);
+   --dark-gray-blue: hsl(227, 10%, 46%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 18px;
+  background-color: var(--dark-gray-blue);
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-size: 637.5px, 637.5px;
+  background-repeat: no-repeat;
+  background-position: top -358px left -423px, bottom -358px right -403px;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* -------------------- */
+/* Fonts                */
+/* -------------------- */
+
+.fw-700 {
+    font-weight: bold;
+}
+
+.fw-400 {
+    font-weight: lighter;
+}
+
+.f-smll{
+  font-size: 12px;
+}
+
+.container{
+    max-width: 350px;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 100px);
+}
+
+.center {
+  position: absolute;
+  width: 350px;
+  height: 400px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.bg-img{
+  grid-column: 1/4;
+  grid-row: 1/3;
+}
+
+.bg-img img{
+  border-radius: 20px 20px 0 0;
+}
+
+.pfp{
+  grid-column: 2/3;
+  grid-row: 2/3;
+  align-content: center;
+  justify-self: center;
+  padding-bottom: 10px;
+}
+
+.pfp img{
+  border-radius: 50px;
+}
+
+.name{
+  grid-column: 1/4;
+  grid-row: 3/4;
+}
+
+.age{
+  grid-row: 3/4;
+  grid-column: 3/4;
+  justify-self: self-start;
+  padding: 0 0 0 10px;
+}
+
+.country{
+  grid-row: 3/4;
+  grid-column: 1/4;
+  align-self: center;
+}
+
+.country h4{
+  font-size: 15px;
+}
+
+.follows{
+  grid-column: 1/2;
+  grid-row: 4/5;
+  align-self: center;
+}
+
+.likes{
+  grid-column: 2/3;
+  grid-row: 4/5;
+  align-self: center;
+}
+
+.photos{
+  grid-column: 3/4;
+  grid-row: 4/5;
+  align-self: center;
+}
+
